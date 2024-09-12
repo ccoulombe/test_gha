@@ -1,0 +1,7 @@
+---
+
+docker:
+    -   image: ubuntu:20.04
+    - image: mongo:4.4
+      command: [mongod, --smallfiles]
+    - image: postgres:13
