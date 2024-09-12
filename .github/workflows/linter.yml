@@ -1,5 +1,14 @@
 ---
-on: [push, pull_request] # yamllint disable-line rule:truthy
+on: # yamllint disable-line rule:truthy
+  push:
+    paths:
+      - '**.yaml'
+      - '**.yml'
+  pull_request:
+    paths:
+      - '**.yaml'
+      - '**.yml'
+
 
 permissions:
   contents: read
