@@ -1,5 +1,10 @@
 ---
-on: [push, pull_request] # yamllint disable-line rule:truthy
+on:
+  push:
+    branches: [ $default-branch, $protected-branches ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ $default-branch ]
 
 permissions:
   contents: read
